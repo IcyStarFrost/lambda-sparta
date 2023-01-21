@@ -149,7 +149,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
                         effect:SetScale( 1 )
                         effect:SetRadius( 200 )
 
-                        self:EmitSound( "ambient/energy/spark" .. random( 1, 6 ) .. ".wav", 65, 100, 1, CHAN_WEAPON )
+                        sound_Play( "ambient/energy/spark" .. random( 1, 6 ) .. ".wav", self:WorldSpaceCenter() + VectorRand( -self:GetModelRadius(), self:GetModelRadius() ), 65, 100, 1 )
 
                         util_Effect( "Sparks", effect, true, true )
                         
