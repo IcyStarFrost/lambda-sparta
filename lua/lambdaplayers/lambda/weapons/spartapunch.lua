@@ -204,7 +204,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
                             self.l_keyentity = victim
                             self:TypeMessage( self:GetTextLine( "kill" ) )
                         elseif random( 1, 100 ) <= self:GetVoiceChance() then
-                            self:PlaySoundFile( killdir:GetString() == "randomengine" and self:GetRandomSound() or self:GetVoiceLine( "kill" ), true )
+                            self:PlaySoundFile( self:GetVoiceLine( "kill" ), true )
                         end
 
                         while self:GetIsTyping() or self:IsSpeaking() do coroutine.yield() end
